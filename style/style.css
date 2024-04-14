@@ -1,0 +1,368 @@
+/* ESTILO GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;  
+}
+
+body{
+    background-color: #000000;
+    height: 100vh;
+}
+
+.flex{
+    display:flex;
+}
+
+.interface{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(rgb(0, 225, 255), rgb(27, 139, 167));
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: rgb(0, 225, 255);
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 15px rgb(255, 254, 254);
+    transform: scale(1.05);
+}
+
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+header a:hover{
+    color: rgb(0, 225, 255);
+    transform: scale(1.10);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 65px;
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.topo-do-site h1 span{
+    color: rgb(8, 190, 214);
+}
+
+p{
+    color: #fff;
+    margin: 40px 0px;
+}
+.img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    width: 390px;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+    
+}
+
+/* ESPECIALIDADES */
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: white;
+    padding: 28px;
+    margin-top: 28px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8PX rgba(255, 255, 255, 0.534);
+}
+
+.especialidades .especialidades-box i{
+    font-size: 50px;
+    color: rgb(8, 190, 214);
+    text-shadow: 0px 0px 6px rgb(45, 73, 126);
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 26px;
+    margin: 12px 0;
+}
+
+div .img-sobre{
+    border-radius: 20px;
+}
+
+/* SOBRE */
+
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+
+}
+
+.sobre .txt-sobre{
+    color: white;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.sobre .txt-sobre h2 span{
+    color: rgb(8, 190, 214);
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgb(8, 190, 214);
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 4px;
+    transition: .3s;
+}
+
+/* PORTFÓLIO */
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.082);
+}
+
+section.portfolio .flex{
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-color: green;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 50px;
+    position: relative
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 187, 211, 0.459);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* FORMULARIO */
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(19, 18, 18, 0.226);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+form input::placeholder{
+    color: rgba(255, 255, 255, 0.623);
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type=submit]{
+    width: 100px;
+    background-color: rgb(8, 190, 214);
+    color: black;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/* rodapé */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.082);
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid aqua;
+}
+
+footer .line-footer p i{
+    color: aqua;
+    font-size: 20px;
+}
+
+footer .line-footer p a{
+    color: white;
+}
+
+@media screen and (max-width: 1063px){
+    .flex{
+        flex-direction: column;
+    }
+    h2.titulo{
+        font-size: 39px;
+        line-height: 37px;
+    }
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+    /* topo do site */
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    section.especialidades{
+        padding: 40px 8%;
+    }
+    .btn-social{
+        text-align: center;
+    }
+    .img-port{
+        margin: 0 auto;
+    }
+    footer .line-footer{
+        text-align: center ;
+    }
+}
